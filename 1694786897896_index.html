@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS assignment chapter 12 to 13</title>
+</head>
+
+<body>
+    <h1>IF…ELSE & ELSE IF STATEMENT,
+        TESTING SET OF CONDITIONS </h1>
+
+    <h2>Question 1</h2>
+
+    <script>
+
+        // Input character (you can change this)
+        var inputChar = 'A'; // Replace with your input character
+
+        // Get the ASCII code of the input character
+        var charCode = inputChar.charCodeAt(0);
+
+        // Check whether the input is an uppercase letter, lowercase letter, or something else
+        if (charCode >= 65 && charCode <= 90) {
+            document.write(inputChar + " is an uppercase letter.");
+        } else if (charCode >= 97 && charCode <= 122) {
+            document.write(inputChar + " is a lowercase letter.");
+        } else {
+            document.write(inputChar + " is not a number, uppercase letter, or lowercase letter.");
+        }
+
+
+    </script>
+    <br>
+
+
+    <h2>Question 2</h2>
+    <script>
+
+        // Accept two integers (you can change these)
+        var integer1 = 10; // Replace with the first integer
+        var integer2 = 20; // Replace with the second integer
+
+        // Compare the two integers
+        if (integer1 > integer2) {
+            document.write("The larger integer is: " + integer1);
+        } else if (integer2 > integer1) {
+            document.write("The larger integer is: " + integer2);
+        } else {
+            document.write("Both integers are equal.");
+        }
+
+    </script>
+    <br>
+
+
+    <h2>Question 3</h2>
+    <!-- <script>
+    
+        // Prompt the user to enter a number
+        var userInput = prompt("Enter a number:");
+
+        // Convert the input to a number
+        var number = parseFloat(userInput);
+
+        // Check if the number is positive, negative, or zero
+        if (isNaN(number)) {
+            document.write("Invalid input. Please enter a valid number.");
+        } else if (number > 0) {
+            document.write(number + " is a positive number.");
+        } else if (number < 0) {
+            document.write(number + " is a negative number.");
+        } else {
+            document.write(number + " is zero.");
+        }
+    
+</script> -->
+    <br>
+
+
+    <h2>Question 4</h2>
+
+    <!-- <script>
+    function isVowel(character) {
+        // Convert the character to lowercase to handle both uppercase and lowercase vowels
+        character = character.toLowerCase();
+
+        // Check if the character is a vowel (a, e, i, o, or u)
+        return character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u';
+    }
+
+    // Example usage:
+    var inputChar = prompt("Enter a character:");
+
+    if (inputChar.length === 1) {
+        var result = isVowel(inputChar);
+        document.write("Is '" + inputChar + "' a vowel? " + result);
+    } else {
+        document.write("Invalid input. Please enter a single character.");
+    }
+</script> -->
+    <br>
+
+
+    <h2>Question 5</h2>
+    <!-- <script>
+    // Step a: Store the correct password in a variable
+    var correctPassword = "mySecretPassword"; // Replace with your correct password
+
+    // Step b: Ask the user to enter their password
+    var userPassword = prompt("Enter your password:");
+
+    // Step c: Validate the two passwords
+    if (userPassword === null) {
+        document.write("Cancelled. Please enter your password.");
+    } else if (userPassword === correctPassword) {
+        document.write("Correct! The password you entered matches the original password.");
+    } else {
+        document.write("Incorrect password.");
+    }
+</script> -->
+    <br>
+
+
+    <h2>Question 6</h2>
+    <script>
+        var greeting;
+        var hour = 13;
+        if (hour < 18) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+    
+        // Display the greeting using document.write
+        document.write(greeting);
+    </script>
+
+<br>
+
+
+<h2>Question 7</h2>
+<!-- <script>
+    // Ask the user to enter time in 24-hour clock format (e.g., 1900)
+    var userInput = prompt("Enter time in 24-hour clock format (e.g., 1900):");
+
+    // Convert the user input to a number
+    var time = parseInt(userInput);
+
+    // Check and categorize the time
+    if (isNaN(time)) {
+        document.write("Invalid input. Please enter a valid time.");
+    } else if (time >= 0 && time < 1200) {
+        document.write("Good morning!");
+    } else if (time >= 1200 && time < 1700) {
+        document.write("Good afternoon!");
+    } else if (time >= 1700 && time < 2100) {
+        document.write("Good evening!");
+    } else if (time >= 2100 && time <= 2359) {
+        document.write("Good night!");
+    } else {
+        document.write("Invalid time. Please enter a valid time in 24-hour format.");
+    }
+</script> -->
+
+<h1>Array assignment 14 to 16</h1>
+
+<br>
+<script>
+    // 1. Declare an empty array using JS literal notation
+    var emptyArrayLiteral = [];
+
+    // 2. Declare an empty array using JS object notation
+    var emptyArrayObject = new Array();
+
+    // 3. Declare and initialize a strings array
+    var stringsArray = ["John", "Alice", "Bob", "Eve"];
+
+    // 4. Declare and initialize a numbers array
+    var numbersArray = [10, 20, 30, 40, 50];
+
+    // 5. Declare and initialize a boolean array
+    var booleanArray = [true, false, true, false];
+
+    // 6. Declare and initialize a mixed array
+    var mixedArray = ["apple", 42, true, "banana", 123];
+
+    // 7. Declare and Initialize an array with education qualifications in Pakistan
+    var qualificationsArray = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+
+    // Display the education qualifications in the browser
+    document.write("<h2>Educational Qualifications in Pakistan:</h2>");
+    document.write("<ul>");
+    for (var i = 0; i < qualificationsArray.length; i++) {
+        document.write("<li>" + qualificationsArray[i] + "</li>");
+    }
+    document.write("</ul>");
+</script>
+<br>
+
+<script>
+    // 1. Create an array to store student names
+    var studentNames = ["John", "Alice", "Bob"];
+
+    // 2. Create an array to store scores for each student (out of 500)
+    var studentScores = [430, 380, 450];
+
+    // 3. Calculate the percentages for each student
+    var totalMarks = 500;
+    var studentPercentages = [];
+
+    for (var i = 0; i < studentScores.length; i++) {
+        var percentage = (studentScores[i] / totalMarks) * 100;
+        studentPercentages.push(percentage.toFixed(2) + "%");
+    }
+
+    // 4. Display the scores and percentages
+    document.write("<h2>Student Scores and Percentages:</h2>");
+    document.write("<table border='1'>");
+    document.write("<tr><th>Student Name</th><th>Score</th><th>Percentage</th></tr>");
+    
+    for (var i = 0; i < studentNames.length; i++) {
+        document.write("<tr>");
+        document.write("<td>" + studentNames[i] + "</td>");
+        document.write("<td>" + studentScores[i] + "</td>");
+        document.write("<td>" + studentPercentages[i] + "</td>");
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+</script>
+<br>
+<!-- <script>
+    // Initialize an array with color names
+    var colorArray = ["Red", "Green", "Blue"];
+
+    // Display the original array
+    document.write("<h2>Original Array:</h2>");
+    document.write(colorArray.join(", ") + "<br>");
+
+    // a. Ask the user to add a color to the beginning of the array
+    var colorToAddAtBeginning = prompt("Enter a color to add to the beginning:");
+    colorArray.unshift(colorToAddAtBeginning);
+
+    // Display the updated array after adding to the beginning
+    document.write("<h2>Updated Array (Added to Beginning):</h2>");
+    document.write(colorArray.join(", ") + "<br>");
+
+    // b. Ask the user to add a color to the end of the array
+    var colorToAddAtEnd = prompt("Enter a color to add to the end:");
+    colorArray.push(colorToAddAtEnd);
+
+    // Display the updated array after adding to the end
+    document.write("<h2>Updated Array (Added to End):</h2>");
+    document.write(colorArray.join(", ") + "<br>");
+
+    // c. Add two more colors to the beginning of the array
+    colorArray.unshift("Yellow", "Purple");
+
+    // Display the updated array after adding two more to the beginning
+    document.write("<h2>Updated Array (Added Two More to Beginning):</h2>");
+    document.write(colorArray.join(", ") + "<br>");
+
+    // d. Delete the first color in the array
+    colorArray.shift();
+
+    // Display the updated array after deleting the first color
+    document.write("<h2>Updated Array (Deleted First Color):</h2>");
+    document.write(colorArray.join(", ") + "<br>");
+
+    // e. Delete the last color in the array
+    colorArray.pop();
+
+    // Display the updated array after deleting the last color
+    document.write("<h2>Updated Array (Deleted Last Color):</h2>");
+    document.write(colorArray.join(", ") + "<br>");
+
+    // f. Ask the user to add a color at a specific index
+    var indexToAdd = parseInt(prompt("Enter the index to add a color:"));
+    var colorToAddAtIndex = prompt("Enter a color to add at that index:");
+    colorArray.splice(indexToAdd, 0, colorToAddAtIndex);
+
+    // Display the updated array after adding at the specified index
+    document.write("<h2>Updated Array (Added at Specified Index):</h2>");
+    document.write(colorArray.join(", ") + "<br>");
+
+    // g. Ask the user to delete colors at a specific index
+    var indexToDelete = parseInt(prompt("Enter the index to delete colors:"));
+    var numberOfColorsToDelete = parseInt(prompt("Enter the number of colors to delete:"));
+    colorArray.splice(indexToDelete, numberOfColorsToDelete);
+
+    // Display the updated array after deleting from the specified index
+    document.write("<h2>Updated Array (Deleted from Specified Index):</h2>");
+    document.write(colorArray.join(", ") + "<br>");
+</script> -->
+
+<br>
+
+<script>
+    // Create an array to store student scores
+    var studentScores = [85, 72, 94, 64, 78];
+
+    // Sort the array in ascending order
+    studentScores.sort(function(a, b) {
+        return a - b;
+    });
+
+    // Display the sorted array
+    document.write("<h2>Sorted Student Scores (Ascending Order):</h2>");
+    document.write(studentScores.join(", "));
+</script>
+<br>
+
+<script>
+    // Initialize an array with city names
+    var cities = ["New York", "Los Angeles", "Chicago", "Houston", "Miami"];
+
+    // Create a new array called selectedCities
+    var selectedCities = [];
+
+    // Copy three elements from the cities array to selectedCities
+    selectedCities = cities.slice(0, 3);
+
+    // Display the selectedCities array
+    document.write("<h2>Selected Cities:</h2>");
+    document.write(selectedCities.join(", "));
+</script>
+<br>
+<script>
+    // Define the array
+    var arr = ["This", "is", "my", "cat"];
+
+    // Use the join method to create a single string
+    var singleString = arr.join(" ");
+
+    // Display the single string
+    document.write("<h2>Single String:</h2>");
+    document.write(singleString);
+</script>
+<br>
+
+<script>
+    // Create an empty array to represent the queue
+    var queue = [];
+
+    // Add values to the queue using the push method (enqueue)
+    queue.push("Value1");
+    queue.push("Value2");
+    queue.push("Value3");
+
+    // Access and remove values from the queue using shift method (dequeue)
+    var firstValue = queue.shift();
+    var secondValue = queue.shift();
+    var thirdValue = queue.shift();
+
+    // Display the values in the order they were removed (FIFO)
+    document.write("<h2>Queue (FIFO) Values:</h2>");
+    document.write("1. " + firstValue + "<br>");
+    document.write("2. " + secondValue + "<br>");
+    document.write("3. " + thirdValue + "<br>");
+</script>
+<br>
+<script>
+    // Create an empty array to represent the stack
+    var stack = [];
+
+    // Add values to the stack using the push method (push)
+    stack.push("Value1");
+    stack.push("Value2");
+    stack.push("Value3");
+
+    // Access and remove values from the stack using the pop method (pop)
+    var lastValue = stack.pop();
+    var secondLastValue = stack.pop();
+    var thirdLastValue = stack.pop();
+
+    // Display the values in reverse order (LIFO)
+    document.write("<h2>Stack (LIFO) Values:</h2>");
+    document.write("1. " + lastValue + "<br>");
+    document.write("2. " + secondLastValue + "<br>");
+    document.write("3. " + thirdLastValue + "<br>");
+</script>
+<br>
+
+<script>
+    // Array of phone manufacturers
+    var manufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+
+    // Document.write to display the select dropdown
+    document.write("<h2>Select Phone Manufacturer:</h2>");
+    document.write('<select id="manufacturerSelect">');
+
+    // Loop through the manufacturers array and create option elements
+    for (var i = 0; i < manufacturers.length; i++) {
+        document.write('<option value="' + manufacturers[i] + '">' + manufacturers[i] + '</option>');
+    }
+
+    document.write('</select>');
+</script>
+
+
+
+
+
+</body>
+
+</html>
